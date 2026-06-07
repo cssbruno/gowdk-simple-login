@@ -18,18 +18,6 @@ email: demo@example.com
 password: demo-password
 ```
 
-## VS Code
-
-Open the project workspace file so GOWDK diagnostics run from this project
-root:
-
-```sh
-code gowdk-simple-login.code-workspace
-```
-
-If VS Code is opened from a parent folder instead of this project root, the
-extension can run `gowdk check` from the wrong directory and report
-`no .gwdk files found`.
 
 ## Files
 
