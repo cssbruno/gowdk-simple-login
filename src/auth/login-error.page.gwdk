@@ -1,0 +1,18 @@
+package auth
+
+@page login.error
+@route "/login/error"
+@css app
+
+view {
+  <main class="login-shell">
+    <section class="login-panel">
+      <p class="eyebrow">GOWDK Simple Login</p>
+      <h1>Login failed</h1>
+      <p class="error" role="alert">Invalid email or password.</p>
+      <form method="get" action="/">
+        <button type="submit">Try again</button>
+      </form>
+    </section>
+  </main>
+}

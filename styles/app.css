@@ -1,0 +1,146 @@
+html {
+  color-scheme: light;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f6f8fb;
+  color: #17202a;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  background: #0f766e;
+  color: white;
+  font-weight: 750;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+}
+
+input {
+  border: 1px solid #cbd5e1;
+  padding: 0.65rem 0.75rem;
+  background: white;
+}
+
+.login-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
+.login-panel {
+  width: min(100%, 28rem);
+  display: grid;
+  gap: 1rem;
+  background: white;
+  border: 1px solid #dbe3ef;
+  padding: 2rem;
+  box-shadow: 0 24px 80px rgba(20, 32, 51, 0.1);
+}
+
+.login-panel h1,
+.dashboard-main h2,
+.sidebar h1 {
+  margin: 0;
+}
+
+.login-panel form {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.error {
+  color: #b42318;
+  font-weight: 700;
+}
+
+.dashboard-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(14rem, 18rem) 1fr;
+}
+
+.sidebar {
+  display: grid;
+  align-content: start;
+  gap: 1.25rem;
+  padding: 2rem;
+  background: #17202a;
+  color: white;
+}
+
+.sidebar a {
+  color: #99f6e4;
+}
+
+.sidebar nav {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.secondary {
+  background: #e2e8f0;
+  color: #17202a;
+}
+
+.nav-button {
+  width: 100%;
+  background: transparent;
+  color: #99f6e4;
+  text-align: left;
+  padding: 0;
+}
+
+.sidebar button:not(.nav-button) {
+  width: 100%;
+  background: white;
+  color: #17202a;
+}
+
+.dashboard-main {
+  display: grid;
+  align-content: start;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.cards article {
+  background: white;
+  border: 1px solid #dbe3ef;
+  padding: 1.25rem;
+}
+
+.cards p {
+  margin-top: 0;
+  color: #64748b;
+}
+
+@media (max-width: 760px) {
+  .dashboard-shell,
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}

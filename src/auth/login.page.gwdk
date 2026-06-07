@@ -1,0 +1,35 @@
+package auth
+
+@page login
+@route "/"
+@css app
+
+act Login POST "/"
+
+api Session GET "/api/session"
+
+view {
+  <main class="login-shell">
+    <section class="login-panel">
+      <p class="eyebrow">GOWDK Simple Login</p>
+      <h1>Sign in</h1>
+      <p>Use the demo credentials to enter the generated dashboard.</p>
+
+      <form g:post={Login}>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" value="demo@example.com" required />
+
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" value="demo-password" required />
+
+        <button type="submit">Sign in</button>
+      </form>
+
+      <PasswordHint />
+
+      <form method="get" action="/api/session">
+        <button class="secondary" type="submit">Check session API</button>
+      </form>
+    </section>
+  </main>
+}

@@ -1,0 +1,49 @@
+package auth
+
+@page dashboard
+@route "/dashboard"
+@css app
+
+act Logout POST "/dashboard"
+
+view {
+  <main class="dashboard-shell">
+    <aside class="sidebar">
+      <p class="eyebrow">Signed in</p>
+      <h1>Dashboard</h1>
+      <nav>
+        <form method="get" action="/dashboard">
+          <button class="nav-button" type="submit">Overview</button>
+        </form>
+        <form method="get" action="/api/session">
+          <button class="nav-button" type="submit">Session JSON</button>
+        </form>
+      </nav>
+      <form g:post={Logout}>
+        <button type="submit">Sign out</button>
+      </form>
+    </aside>
+
+    <section class="dashboard-main">
+      <header>
+        <p class="eyebrow">Generated app</p>
+        <h2>Welcome back</h2>
+      </header>
+
+      <section class="cards">
+        <article>
+          <p>Auth mode</p>
+          <strong>Signed cookie</strong>
+        </article>
+        <article>
+          <p>API</p>
+          <strong>/api/session</strong>
+        </article>
+        <article>
+          <p>Runtime</p>
+          <strong>One binary</strong>
+        </article>
+      </section>
+    </section>
+  </main>
+}
